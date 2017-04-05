@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Coffee Run </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <style>
+        form :focus:required:invalid {
+            border-color: #a94442;
+        }
+    </style>
+
+</head>
+
+<body class="container">
+    <header>
+        <h1>CoffeeRun</h1>
+    </header>
+    <section>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form data-coffee-order="form">
+                    <!-- Input elements will go here -->
+                    <div class="form-group">
+                        <label for="coffeeOrder">Coffee Order</label>
+                        <input class="form-control" name="coffee" id="coffeeOrder" autofocus required pattern="[a-zA-Z\s]+">
+                    </div>
+                    <div class="form-group">
+                        <label for="emailInput">Email</label>
+                        <input class="form-control" type="email" name="emailAddress" id="emailInput" value="" placeholder="dr@who.com" required>
+                    </div>
+                    <div class="radio">
+                        <label>
+                  <input type="radio" name="size" value="short">
+                  Short
+                </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                  <input type="radio" name="size" value="tall" checked>
+                  Tall
+                </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                  <input type="radio" name="size" value="grande">
+                  Grande
+                </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                  <input type="radio" name="size" value="Coffee-zilla">
+                  Coffee-zilla
+                </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="flavorShot">Flavor Shot</label>
+                        <select id="flavorShot" class="form-control" name="flavor">
+                <option value="">None</option>
+                <option value="caramel">Caramel</option>
+                <option value="almond">Almond</option>
+                <option value="mocha">Mocha</option>
+              </select>
+                    </div>
+
+                    <div class="powerUP">
+                        <div class="form-group">
+
+                            <label for="powerUP"> Power Ups</label>
+
+                            <div class="radio">
+                                <label>
+                                <input type="radio" name="powerUP">
+                                Mind Reading
+                              </label>
+                            </div>
+
+                            <div class="radio">
+                                <label>
+                                <input type="radio" name="PowerUP">
+                                Time Travel
+                            </label>
+                            </div>
+
+                            <div class="radio">
+                                <label>
+                              <input type="radio" name="PowerUP">
+                              Bug-free code
+                            </label>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="strengthLevel" id="strengthLabel">Caffeine Rating</label>
+                        <input name="strength" id="strengthLevel" type="range" value="30">
+                        <output for="strengthLevel" id="strengthOutput">30</output>
+                    </div>
+
+                    <button type="submit" class="btn btn-default">Submit</button>
+                    <button type="reset" class="btn btn-default">Reset</button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Achievement Alert</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>This is to inform you of your amazing intensity and commitment to flavor.</p>
+                                    <p>because you chose the largest and strongest coffee, you've unlocked an achievnemnt, Would you like to use it?</p>
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Yes</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h4>Pending Orders:</h4>
+                <div data-coffee-order="checklist">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="scripts/validation.js" charset="utf-8"></script>
+    <script src="scripts/checklist.js" charset="utf-8"></script>
+    <script src="scripts/formhandler.js" charset="utf-8"></script>
+    <script src="scripts/remotedatastore.js" charset="utf-8"></script>
+    <script src="scripts/datastore.js" charset="utf-8"></script>
+    <script src="scripts/truck.js" charset="utf-8"></script>
+    <script src="scripts/main.js" charset="utf-8"></script>
+
+</body>
+
+</html>
