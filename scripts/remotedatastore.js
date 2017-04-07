@@ -12,6 +12,7 @@
     }
 
     RemoteDataStore.prototype.add = function(key, val) {
+        val.id = val.emailAddress;
         return $.post(this.serverUrl, val, function(serverResponse) {
             console.log(serverResponse);
         });
@@ -38,7 +39,8 @@
 
     RemoteDataStore.prototype.remove = function(key) {
         return $.ajax(this.serverUrl + '/' + key, {
-            type: 'DELETE'
+            type: 'DELETE',
+            dataType: 'JSON'
         });
     };
 

@@ -7,6 +7,14 @@
       "flavor": "",
       "strength": "30",
       "id": "test@bignerdranch.com"
+    },
+    {
+      "coffee": "coffee latte",
+      "emailAddress": "yaser@bignerdranch.com",
+      "size": "grande",
+      "flavor": "mocha",
+      "strength": "51",
+      "id": "yaser@bignerdranch.com"
     }
   ]
 }
